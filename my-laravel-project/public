@@ -1,0 +1,19 @@
+The /my-laravel-project/my-laravel-project/public directory is intended to contain the front-facing files of the application. Typically, this directory includes an index.php file that serves as the entry point for the application. 
+
+Here are the contents for the index.php file in the public directory:
+
+<?php
+
+require __DIR__.'/../vendor/autoload.php';
+
+$app = require_once __DIR__.'/../bootstrap/app.php';
+
+$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
+
+$response = $kernel->handle(
+    $request = Illuminate\Http\Request::capture()
+);
+
+$response->send();
+
+$kernel->terminate($request, $response);

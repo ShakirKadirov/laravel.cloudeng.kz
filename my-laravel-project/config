@@ -1,0 +1,101 @@
+<?php
+
+return [
+
+    'app_name' => env('APP_NAME', 'Laravel'),
+
+    'app_env' => env('APP_ENV', 'production'),
+
+    'app_debug' => (bool) env('APP_DEBUG', false),
+
+    'app_url' => env('APP_URL', 'http://localhost'),
+
+    'log_channel' => env('LOG_CHANNEL', 'stack'),
+
+    'database' => [
+
+        'default' => env('DB_CONNECTION', 'mysql'),
+
+        'connections' => [
+
+            'mysql' => [
+
+                'driver' => 'mysql',
+
+                'host' => env('DB_HOST', '127.0.0.1'),
+
+                'port' => env('DB_PORT', '3306'),
+
+                'database' => env('DB_DATABASE', 'forge'),
+
+                'username' => env('DB_USERNAME', 'forge'),
+
+                'password' => env('DB_PASSWORD', ''),
+
+                'unix_socket' => env('DB_SOCKET', ''),
+
+                'charset' => 'utf8mb4',
+
+                'collation' => 'utf8mb4_unicode_ci',
+
+                'prefix' => '',
+
+                'strict' => true,
+
+                'engine' => null,
+
+            ],
+
+        ],
+
+    ],
+
+    'mail' => [
+
+        'default' => env('MAIL_MAILER', 'smtp'),
+
+        'mailers' => [
+
+            'smtp' => [
+
+                'transport' => 'smtp',
+
+                'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+
+                'port' => env('MAIL_PORT', 587),
+
+                'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+
+                'username' => env('MAIL_USERNAME'),
+
+                'password' => env('MAIL_PASSWORD'),
+
+                'auth_mode' => null,
+
+            ],
+
+        ],
+
+        'from' => [
+
+            'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
+
+            'name' => env('MAIL_FROM_NAME', 'Example'),
+
+        ],
+
+    ],
+
+    'services' => [
+
+        'stripe' => [
+
+            'key' => env('STRIPE_KEY'),
+
+            'secret' => env('STRIPE_SECRET'),
+
+        ],
+
+    ],
+
+];
